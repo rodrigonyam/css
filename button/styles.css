@@ -14,3 +14,17 @@
   background-color: #4d19263b;
   transform: translateY(-2px);
 }
+.regular-btn {
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #720b53;
+  color: white;
+  padding: 0.6rem 1.6rem;
+}
+.regular-btn:hover {
+  background-color: #e911473b;
+  transform: translateY(-2px);
+}
