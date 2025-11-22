@@ -48,6 +48,12 @@ h1, h2 {
   margin: 5px 0;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .flavor, .dessert {
   text-align: left;
   width: 75%;
