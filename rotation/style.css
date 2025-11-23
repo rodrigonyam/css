@@ -1,0 +1,37 @@
+:root{
+  --width: 900px;
+  --height: 480px;
+  --dot-size: 12px;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#111;color:#fff}
+.carousel{width:min(95vw,var(--width));max-width:100%;height:var(--height);position:relative;overflow:hidden;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.6);background:#222}
+.slides{width:100%;height:100%;position:relative}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease,transform .6s ease;transform:scale(1.02)}
+.slide.active{opacity:1;transform:scale(1)}
+
+/* Animation modes */
+/* Fade (default) keeps slides stacked and animates opacity */
+.carousel.fade .slides{position:relative}
+.carousel.fade .slide{position:absolute;left:0;top:0}
+
+/* Slide mode: place slides in a row and translate the container */
+.carousel.slide .slides{display:flex;flex-direction:row;transition:transform .6s ease;height:100%}
+.carousel.slide .slide{position:relative;opacity:1;transform:none;min-width:100%;height:100%}
+.carousel.slide .slide:not(.active){opacity:1}
+
+/* When using slide mode we hide the overflow by the carousel itself */
+.carousel.slide .slides .slide img, .carousel.slide .slides .slide{width:100%;height:100%}
+.nav{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(0,0,0,.35);border:0;color:#fff;padding:12px 14px;border-radius:6px;cursor:pointer;font-size:22px;backdrop-filter:blur(4px)}
+.nav:hover{background:rgba(0,0,0,.6)}
+.nav.prev{left:12px}
+.nav.next{right:12px}
+.indicators{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;display:flex;gap:8px;z-index:12}
+.indicator{width:var(--dot-size);height:var(--dot-size);border-radius:50%;background:rgba(255,255,255,.35);border:2px solid rgba(0,0,0,.2);cursor:pointer}
+.indicator.active{background:linear-gradient(90deg,#fff,#e6e6e6);box-shadow:0 2px 8px rgba(0,0,0,.4)}
+
+/* Responsive */
+@media (max-width:640px){
+  :root{--height:300px}
+  .nav{padding:8px;font-size:18px}
+}
