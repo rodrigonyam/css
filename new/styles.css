@@ -1,0 +1,36 @@
+/* Page-wide styles */
+body {
+  background-color: rosybrown;
+  font-family: Arial, sans-serif;
+}
+
+/* Paragraph spacing */
+p {
+  margin: 5px 0;
+}
+
+/* Links should not be underlined */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Business card container */
+.business-card {
+  width: 300px;
+  background-color: lightsteelblue;
+  padding: 20px;
+  margin: 100px auto 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.profile-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 6px 8px 0 8px;
+}
