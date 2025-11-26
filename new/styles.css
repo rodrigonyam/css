@@ -34,3 +34,39 @@ a {
   display: inline-block;
   margin: 6px 8px 0 8px;
 }
+
+/* To-do list and sub-item link styles */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  text-align: left;
+}
+.todo-list li {
+  margin-bottom: 8px;
+}
+.todo-list input[type="checkbox"] {
+  margin-right: 8px;
+}
+.sub-item {
+  list-style: none;
+  padding-left: 20px;
+  margin: 6px 0 0 0;
+}
+.sub-item-link {
+  text-decoration: none;
+  color: #1e40af; /* link color */
+}
+.sub-item-link:visited {
+  color: #6b21a8; /* visited color */
+}
+.sub-item-link:hover {
+  color: #0ea5a0; /* hover color */
+}
+.sub-item-link:focus {
+  outline: 3px solid #f59e0b; /* focus outline */
+  outline-offset: 2px;
+}
+.sub-item-link:active {
+  color: #dc2626; /* active/clicked color */
+}

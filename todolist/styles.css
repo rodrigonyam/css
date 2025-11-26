@@ -1,0 +1,20 @@
+/* Basic layout */
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; padding: 24px; }
+.todo-list { list-style: none; padding: 0; margin: 0; }
+.todo-list > li { margin: 1rem 0; }
+.todo-list input[type="checkbox"] { margin-right: 0.5rem; }
+.sub-item { list-style: none; padding-left: 1.5rem; margin-top: 0.4rem; }
+
+/* Link styling per requirements */
+.sub-item-link { text-decoration: none; color: #1a73e8; /* default link color */ }
+.sub-item-link:visited { color: #6a1b9a; /* visited color */ }
+.sub-item-link:hover { color: #e53935; /* hover color */ }
+.sub-item-link:active { color: #ff8f00; /* clicked (active) color */ }
+.sub-item-link:focus { outline: 3px solid #00c853; outline-offset: 2px; border-radius: 2px; }
+
+/* Small accessibility nicety: show focus only when keyboard-focused */
+/* (Most browsers now support :focus-visible; fallback to :focus) */
+@supports(selector(:focus-visible)) {
+  .sub-item-link:focus { outline: none; }
+  .sub-item-link:focus-visible { outline: 3px solid #00c853; outline-offset: 2px; }
+}
